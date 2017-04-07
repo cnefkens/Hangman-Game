@@ -1,0 +1,149 @@
+@font-face {
+    font-family: ActionIs;
+    src: local(ActionIs), url('../fonts/actionis.ttf') format('opentype');
+}
+
+body {
+	/*box-sizing: border-box;*/
+	background-image: url("../images/sunrise.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 18px;
+	/*padding:0px;
+	*/margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	height: 146.5px;
+	display: block;
+	margin: 0px;
+	
+}
+
+.container{
+	margin-left:2.5%;
+	margin-right:2.5%;
+	height: auto;
+	width: auto;
+}
+
+#PageHeader {
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	font-family: "ActionIs";
+	/*font-weight: bold;*/
+	font-size: 52px;
+	margin: 0px;
+}
+
+.MainSection{
+	position: relative;
+	margin-left: 1%;
+	/*margin-right: 0px;*/
+	/*width:100%;*/
+	height:100%;
+	width:100%;
+	clear: both;
+	font-family: "ActionIs";
+	font-size: 20px;
+	/*font-weight: bold;*/
+}
+
+.Main {
+	margin-right:0px;
+	margin-left:0px;
+	width: 100%;
+	height: 100%;
+}
+
+#lblInstructions, #lblGameStats {
+	font-size:32px;
+	text-decoration: underline;
+}
+.MainMiddleRow{
+	height:100%;
+	width: 100%;
+    padding:0px;
+    margin-bottom: 1%;
+    margin-top: 1.5%;
+    padding-left: 5%;
+}
+
+.MainMiddleCol {
+	padding-left:0px;
+	padding-right:0px;
+	height: 100%;
+	margin:0px;
+	width: auto;
+}
+
+.PicCol {
+	height: 100%;
+	padding:0px;
+	width: auto;
+}
+
+.PicRow {
+	margin:0px;
+	padding: 0px;
+}
+
+.imgGoldMember{
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	display: none;
+}
+
+#parGuessWord, #parCurrWord {
+	font-size: 36px;
+}
+#parGuessedLetters{
+	font-size: 32px;
+}
+
+/*#LeftSideBar {
+	display: block;
+	position: absolute;
+	top:96px;
+	bottom:0;
+	width:10%;
+	float: left;
+}
+.Wrapper {
+	position: relative;
+	float: left;
+}
+
+
+
+#divInstructions {
+	position: relative;
+	clear: both;
+
+}
+*/
+/*footer {
+    width:100%;
+    bottom: 0;
+	margin-top: 10px;
+	height: 30px;
+	clear: both;
+	text-align: center;
+	font-family: "ActionIs";
+	font-size: 20px;
+}*/
+.footer{
+	line-height: 40px;
+}
+#PageFooter {
+    /*position: relative;*/
+    padding: 10px;
+	text-align: center;
+	font-family: "ActionIs";
+	font-size: 20px;
+}

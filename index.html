@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman-Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	
+	  <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+
+   
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  		<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+  	<script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+
+<header>
+	<h1 id="PageHeader">Austin Power's Hangman<br>Yeah Baby!</h1>
+</header>
+
+<div class="container MainSection">
+	<div class="row" id="Main">
+	  <div class="col-md-12">
+	  <div class="row">
+		<div class="col-md-1" id="LeftSideBar"></div>
+		<div class="col-md-10">
+			<div class="row" id="MainTopRow">
+				<div class="col-md-6">
+					<div id="divInstructions">
+						<ol><h2 id="lblInstructions">Instructions</h2>
+							<li>Press the space key to start</li>
+							<li>You can play up to 10 rounds of hangman</li>
+							<li>Each word or short phase is based on an Austin Power's movie</li>
+							<li>Press a letter key to select a letter</li>
+							<li>Each time you miss a letter, a part of Austin Power's gold nemesis will appear</li>
+							<li>If you miss more than 6 letters, you lose the round.</li>
+							<li>Press the escape key to end the game</li>
+						</ol>
+					</div>
+			   </div>
+			   <div class="col-md-3"></div>
+			   <div class="col-md-3">
+			   		<div id="divGameStats">
+						<h2 id="lblGameStats">Game Stats</h2>
+		  					<p id="parWordCnt">Word 0 of 10</p>
+		  					<p id="parWins">Wins: 0</p>
+		  					<p id="parLosses">Losses: 0</p>
+					</div>	
+			  </div>
+			</div>			
+		<div class="row MainMiddleRow">
+        	<div class="col-md-2"></div>
+        	<div class="col-md-8 MainMiddleCol">
+				<div class="row PicRow">
+		   			<div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopLeft"  src="assets/images/Goldmember Splits-0-0.jpeg" alt="Goldmember Splits Panel1" height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopMiddle"  src="assets/images/Goldmember Splits-0-1.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopRight"  src="assets/images/Goldmember Splits-0-2.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+		   		 </div>
+		   		<div class="row PicRow">    		
+		   			<div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomLeft"  src="assets/images/Goldmember Splits-1-0.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomMiddle"  src="assets/images/Goldmember Splits-1-1.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomRight"  src="assets/images/Goldmember Splits-1-2.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+		   		  </div> 
+		   	</div>
+		   	<div class="col-md-2"></div>
+		</div>
+	
+		<div class="row" id="MainBottomRow">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="row" id="GuessWordRow1">
+				   <div class="col-md-12">	
+						<div id="divGuessWord">
+			  	 			<p id="parGuessWord">Guess Word:</p>
+		       				<!-- <p id="parCurrWord">Current Word:</p> -->
+		       				<p id="parGuessLetters">Guessed letters: 0</p?
+						</div>
+					</div>
+				</div>	
+		</div>
+		<div class="col-md-3"></div>
+		</div>
+	</div>	
+	
+</div>	
+<div class="col-md-1" id="RightSideBar"></div>
+</div>
+</div>
+</div>
+
+</body>
+<footer class="footer">
+	<div class="container">
+		<p id="PageFooter">&copy;Copyright 2017</p>
+	</div>
+</footer>
+</html>
