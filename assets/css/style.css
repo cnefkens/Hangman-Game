@@ -9,136 +9,120 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
-	/*padding:0px;
-	*/margin: 0px;
+    /*padding:0px;*/
+	margin: 0px;S
 	height: 100%;
 	width: 100%;
 }
 
 header {
-	height: 146.5px;
 	display: block;
 	margin: 0px;
 	
 }
 
-.container{
+
+/*.container{
 	margin-left:2.5%;
 	margin-right:2.5%;
 	height: auto;
 	width: auto;
-}
+}*/
 
 #PageHeader {
 	position: relative;
-	padding: 20px;
+	/*padding-left: 20px;*/
+	/*padding-right: 20px;*/
+	padding-top: 20px;
 	text-align: center;
 	font-family: "ActionIs";
 	/*font-weight: bold;*/
-	font-size: 52px;
+	font-size: 56px;
 	margin: 0px;
+	color: purple;
 }
+
+
 
 .MainSection{
 	position: relative;
-	margin-left: 1%;
+	margin-left: 5%;
 	/*margin-right: 0px;*/
 	/*width:100%;*/
-	height:100%;
-	width:100%;
-	clear: both;
+	/*height:100%;*/
+	/*width:100%;*/
+	/*clear: both;*/
 	font-family: "ActionIs";
 	font-size: 20px;
 	/*font-weight: bold;*/
 }
-
-.Main {
-	margin-right:0px;
-	margin-left:0px;
-	width: 100%;
-	height: 100%;
+/*.TopCol{S
+	float: left;
+}*/
+.imgTopImages, .imgDefender ,.imgFighter{
+	position: relative;
+   /*width: 15%;*/
+	/*height: auto;*/
+	margin:5px;
+	padding-left padding-right: 4px;
+	float: left;
+    border: 4px solid purple;
+	background: #f0f2b0;
+	/*display: none;*/
+}
+.imgEnemies{
+	border: 4px solid red;
 }
 
-#lblInstructions, #lblGameStats {
-	font-size:32px;
-	text-decoration: underline;
-}
-.MainMiddleRow{
-	height:100%;
-	width: 100%;
-    padding:0px;
-    margin-bottom: 1%;
-    margin-top: 1.5%;
-    padding-left: 5%;
+
+
+.imgDefender{
+	border: 4px solid green;
 }
 
-.MainMiddleCol {
-	padding-left:0px;
-	padding-right:0px;
-	height: 100%;
-	margin:0px;
-	width: auto;
+.SectionHeader{
+	color: purple;
+	clear: right;
 }
 
-.PicCol {
-	height: 100%;
-	padding:0px;
-	width: auto;
+.btnAttack, .btnReset{
+	background: purple;
+	float: left;
+	clear: both;
 }
 
-.PicRow {
-	margin:0px;
-	padding: 0px;
-}
-
-.imgGoldMember{
-	height:100%;
-	width:100%;
-	margin:0px;
-	padding:0px;
+.btnReset{
+	background: blue;
 	display: none;
 }
 
-#parGuessWord, #parCurrWord {
-	font-size: 36px;
-}
-#parGuessedLetters{
-	font-size: 32px;
-}
-
-/*#LeftSideBar {
-	display: block;
-	position: absolute;
-	top:96px;
-	bottom:0;
-	width:10%;
-	float: left;
-}
-.Wrapper {
-	position: relative;
-	float: left;
-}
-
-
-
-#divInstructions {
-	position: relative;
-	clear: both;
-
-}
-*/
-/*footer {
-    width:100%;
-    bottom: 0;
-	margin-top: 10px;
-	height: 30px;
-	clear: both;
+.imgHeader, .imgFooter, .imgDefenderFooter {
 	text-align: center;
-	font-family: "ActionIs";
-	font-size: 20px;
+	font-size: 16px;
+	color: purple;
+	background: #f6f7de;
+}
+/*#TopImages {
+	width: 150px;
+	height: auto;
+	position: relative;
+	float:left;
 }*/
-.footer{
+.DefenderSection,.EnemiesSection{
+	clear:left;
+	height: 166px;
+}
+
+.GameStatus{
+	font-size: 14px;
+	padding: 1px;
+	color: purple;
+	margin: 2.5%;
+}
+
+footer{
 	line-height: 40px;
+	clear:left;
 }
 #PageFooter {
     /*position: relative;*/
@@ -146,4 +130,5 @@ header {
 	text-align: center;
 	font-family: "ActionIs";
 	font-size: 20px;
+	color: purple;
 }
