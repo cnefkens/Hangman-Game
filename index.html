@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Austin Powers RPG Game</title>
+  <title>Hangman-Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
   	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -15,7 +15,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript" async src="https://www.tenor.co/embed.js"></script>
 
 	
 	  <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -31,59 +30,99 @@
 <body>
 
 <header>
-	<h1 id="PageHeader">Austin Power's Groovy RPG Game!</h1>
+	<h1 id="PageHeader">Austin Power's Hangman<br>Yeah Baby!</h1>
 </header>
 
 <div class="container MainSection">
-	<div class="row YourCharacterSection">
-		<h2 class="SectionHeader">Your Character</h2>
-		<div class="col-md-12 FighterCol"> 
-				<div class="thumbnail imgTopImages imgFatBastard" health-points=150 attack-points=8 counter-points=20 fighter-name="Fat Bastard"> 
-					<div class="imgHeader">Fat Bastard</div>
-					<img src="http://i1159.photobucket.com/albums/p637/Adunn1168/Tumblr/tumblr_lt4mlbxFJy1qeor4y.gif" 	border="0" alt="Fat Bastard Pic" height="auto" width="150"> 
-					 <div class="imgFooter">150 Pts</div>
-				</div>
-				
-				<div class="thumbnail imgTopImages imgDrEvil" health-points=180 attack-points=8 counter-points=25 fighter-name="Dr. Evil">
-					<div class="imgHeader">Dr. Evil</div>
-					<img src="https://media.tenor.co/images/4561e771e890d8e5d9a2b731fec80e5a/tenor.gif" border="0" alt="DR Evil Pic" height="auto" width="150" >
-					<div class="imgFooter">180 Pts</div>
-				</div>
-				
-				<div class="thumbnail imgTopImages imgGoldmember" health-points=100 attack-points=8 counter-points=5 fighter-name="Goldmember">
-					<div class="imgHeader">Goldmember</div>
-					<img src="https://media.tenor.co/images/3b49930bcc21adc41750a497414312c1/tenor.gif" border="0" alt="Goldmember Pic" height="auto" width="150">
-					<div class="imgFooter">100 Pts</div>
+	<div class="row" id="Main">
+	  <div class="col-md-12">
+	  <div class="row">
+		<div class="col-md-1" id="LeftSideBar"></div>
+		<div class="col-md-10">
+			<div class="row" id="MainTopRow">
+				<div class="col-md-6">
+					<div id="divInstructions">
+						<ol><h2 id="lblInstructions">Instructions</h2>
+							<li>Press the space key to start</li>
+							<li>You can play up to 10 rounds of hangman</li>
+							<li>Each word or short phase is based on an Austin Power's movie</li>
+							<li>Press a letter key to select a letter</li>
+							<li>Each time you miss a letter, a part of Austin Power's gold nemesis will appear</li>
+							<li>If you miss more than 6 letters, you lose the round.</li>
+							<li>Press the escape key to end the game</li>
+						</ol>
+					</div>
+			   </div>
+			   <div class="col-md-3"></div>
+			   <div class="col-md-3">
+			   		<div id="divGameStats">
+						<h2 id="lblGameStats">Game Stats</h2>
+		  					<p id="parWordCnt">Word 0 of 10</p>
+		  					<p id="parWins">Wins: 0</p>
+		  					<p id="parLosses">Losses: 0</p>
+					</div>	
+			  </div>
+			</div>			
+		<div class="row MainMiddleRow">
+        	<div class="col-md-2"></div>
+        	<div class="col-md-8 MainMiddleCol">
+				<div class="row PicRow">
+		   			<div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopLeft"  src="assets/images/Goldmember Splits-0-0.jpeg" alt="Goldmember Splits Panel1" height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopMiddle"  src="assets/images/Goldmember Splits-0-1.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberTopRight"  src="assets/images/Goldmember Splits-0-2.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+		   		 </div>
+		   		<div class="row PicRow">    		
+		   			<div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomLeft"  src="assets/images/Goldmember Splits-1-0.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomMiddle"  src="assets/images/Goldmember Splits-1-1.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+
+		   		    <div class="col-md-4 PicCol">
+		   				<div class="thumbnail imgGoldMember"> <img id="imgGoldmemberBottomRight"  src="assets/images/Goldmember Splits-1-2.jpeg" alt="..." height="100" width="200"></div>
+		   		    </div>
+		   		  </div> 
+		   	</div>
+		   	<div class="col-md-2"></div>
+		</div>
+	
+		<div class="row" id="MainBottomRow">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="row" id="GuessWordRow1">
+				   <div class="col-md-12">	
+						<div id="divGuessWord">
+			  	 			<p id="parGuessWord">Guess Word:</p>
+		       				<!-- <p id="parCurrWord">Current Word:</p> -->
+		       				<p id="parGuessLetters">Guessed letters: 0</p?
+						</div>
+					</div>
 				</div>	
-				
-				<div class="thumbnail imgTopImages imgAustinPowers" health-points=120 attack-points=8 counter-points=15 fighter-name="Austin Powers">
-					<div class="imgHeader">Austin Powers</div>
-					<img src="https://media.tenor.co/images/f514de3e118171452e15a29a4ef5e7fe/tenor.gif" border="0"  alt="Austin Powers Pic" height="auto" width="150">
-					<div class="imgFooter">120 Pts</div>
-				</div>
+		</div>
+		<div class="col-md-3"></div>
+		</div>
 	</div>	
-	</div>
+	
+</div>	
+<div class="col-md-1" id="RightSideBar"></div>
+</div>
+</div>
+</div>
 
-	<div class="row EnemiesSection">
-		<h2 class="SectionHeader">Enemies Available to Attack</h2>
-		<div class="col-md-12 EnemiesCol"></div>	
-	    <button class="btn btn-primary btnAttack">Attack</button>
-	</div>
-
-	<div class="row DefenderSection">
-		<h2 class="SectionHeader">Defender</h2>
-		<div class="col-md-12 DefenderCol"></div>	
-		<div class="GameStatus"></div>	
-	    <button class="btn btn-primary btnReset">Reset</button>
-	</div>
-  
- </div>
 </body>
-
 <footer class="footer">
 	<div class="container">
 		<p id="PageFooter">&copy;Copyright 2017</p>
 	</div>
 </footer>
-
 </html>
