@@ -5,7 +5,7 @@
 
 body {
 	/*box-sizing: border-box;*/
-	background-image: url("../images/sunrise.jpg");
+	background-image: url("../images/Sunrise.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 18px;
@@ -97,7 +97,7 @@ header {
 	width:100%;
 	margin:0px;
 	padding:0px;
-	display: none;
+	/*display: none;*/
 }
 
 #parGuessWord, #parCurrWord {
