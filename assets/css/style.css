@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ActionIs';
-    src: url('../fonts/actionis.ttf') format('opentype');
+    src: url('../fonts/actionis.TTF') format('opentype');
 }
 
 body {
