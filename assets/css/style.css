@@ -97,7 +97,7 @@ header {
 	width:100%;
 	margin:0px;
 	padding:0px;
-	/*display: none;*/
+	display: none;
 }
 
 #parGuessWord, #parCurrWord {
